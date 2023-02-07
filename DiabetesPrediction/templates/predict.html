@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predict page</title>
+    <style>
+         body{
+        background-image:url("{% static 'DiabetesPrediction\images\img2.jpg'%}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .main{
+        position:fixed;
+        top:140px;
+        margin-left:410px;
+        width:550px;
+        background-color:#ffffff;
+        border-radius: 10px;
+        align-items:center;
+        padding:5%;
+        }
+
+        h1{
+        color:#0086b3;
+        font-size:30px;
+        font-weight:bold;
+        }
+         h3{
+        color:white;
+        font-size:30px;
+        font-weight:bold;
+        top:200px;
+        margin-left:600px;
+        }
+
+        input[type=submit]{
+        background-color:#4dc3ff;
+        border:2px;
+        color:white;
+        padding:8px 16px;
+        cursor:pointer;
+        margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+<h3>Predict Your Diabetes</h3>
+<div align = 'center' class="main">
+    <h1>Please enter the following information:</h1>
+
+    <form action="result">
+        <table>
+            <tr>
+            <td align="right"> Pregnancies:</td>
+            <td align="left"><input type="text" required name="n1"></td>
+            </tr>
+                        <tr>
+            <td align="right"> Glucose:</td>
+            <td align="left"><input type="text" required name="n2"></td>
+            </tr>
+                        <tr>
+            <td align="right"> BloodPressure:</td>
+            <td align="left"><input type="text" required name="n3"></td>
+            </tr>
+                        <tr>
+            <td align="right"> SkinThickness:</td>
+            <td align="left"><input type="text" required name="n4"></td>
+            </tr>
+                        <tr>
+            <td align="right"> Insulin:</td>
+            <td align="left"><input type="text"  required name="n5"></td>
+            </tr>
+                        <tr>
+            <td align="right"> BIM:</td>
+            <td align="left"><input type="text" required name="n6"></td>
+            </tr>
+                        <tr>
+            <td align="right"> DiabetesPedigreeFunction:</td>
+            <td align="left"><input type="text"  required name="n7"></td>
+                                        <tr>
+            <td align="right"> Age:</td>
+            <td align="left"><input type="text" required name="n8"></td>
+            </tr>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+    Result:<b>{{result2}}</b>
+</div>
+</body>
+</html>
